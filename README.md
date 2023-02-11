@@ -2,6 +2,6 @@
 
 Self_study
 
-1. Linear_algebra_with_python
+1. Linear_algebra_with_python: Unit_2_proceeding
 
-2. Django_framework_with_python
+2. Problem_solving_with_cpp: boj.kr
