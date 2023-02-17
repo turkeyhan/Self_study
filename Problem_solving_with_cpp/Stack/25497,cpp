@@ -1,0 +1,43 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int N;
+char tmp;
+int main()
+{
+	ios_base::sync_with_stdio;
+	cin.tie(nullptr); cout.tie(nullptr);
+
+	cin >> N;
+	stack <char> st1;
+	stack <char> st2;
+	int cnt = 0;
+	int start = 1;
+	for (int i = 0; i < N; i++)
+	{
+		cin >> tmp;
+		if (tmp == 'L') st1.push(tmp);
+		else if (tmp == 'S') st2.push(tmp);
+		else if (tmp == 'R')
+		{
+			if (!st1.empty())
+			{
+				st1.pop();
+				cnt++;
+			}
+			else break;
+		}
+		else if (tmp == 'K')
+		{
+			if (!st2.empty())
+			{
+				st2.pop();
+				cnt++;
+			}
+			else break;
+		}
+		else cnt++;
+	}
+	cout << cnt << '\n';
+	return 0;
+}
